@@ -10,7 +10,7 @@ class MailManager(object):
         self.smtpHost = 'smtp.sina.com'
         self.port = 25
         self.userName = 'lu@sina.com'
-        self.passWord = 'xxxxxx'
+        self.passWord = '150705'
         self.bossMail = 'xxxxxx@qq.com'
         self.login()
         self.configMailBox()
