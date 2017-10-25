@@ -9,7 +9,7 @@ class MailManager(object):
         self.popHost = 'pop.sina.com'
         self.smtpHost = 'smtp.sina.com'
         self.port = 25
-        self.userName = '@sina.com'
+        self.userName = 'lu@sina.com'
         self.passWord = 'xxxxxx'
         self.bossMail = 'xxxxxx@qq.com'
         self.login()
