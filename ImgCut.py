@@ -1,9 +1,11 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 from PIL import Image
 import os
 import numpy as np
 
 # 打开图片
-pngName = 'ffe2f7cf-fcd2-45db-9cd7-474af98992fc'
+pngName = '317639a9-4f1e-4092-bbd3-a0f42a042f2e'
 img = Image.open('F:/Pathanalysis/%s.png' % pngName)
 # 创建路径
 changePath="F:/Pathanalysis/change/imgCut/"+pngName[:4]+'/'  # 左闭右开区间
