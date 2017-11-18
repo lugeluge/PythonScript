@@ -4,7 +4,7 @@
 '''
 from PIL import Image
 import os
-endPath = '3176'
+endPath = 'df58'
 path = 'F:/Pathanalysis/change/imgCut/%s' % endPath
 tempName = 'black'+endPath
 changPath = "F:/Pathanalysis/change/imgCut/%s" % tempName

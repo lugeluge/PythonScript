@@ -5,7 +5,7 @@
 from PIL import Image
 from PIL import ImageDraw
 
-f=open("317639a9-4f1e-4092-bbd3-a0f42a042f2e.txt")
+f=open("df58afcf-e5a5-4163-ba6b-1042cf0ec949.txt")
 lines = f.readlines()
 len1=len(lines)
 i=0
@@ -13,7 +13,7 @@ L=[]
 
 def roiTest():
     x=0
-    srcImg = Image.new('L',(28827,35444))
+    srcImg = Image.new('L',(34085,30072))
     draw = ImageDraw.Draw(srcImg)
     global i
     for line in lines:

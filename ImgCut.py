@@ -5,7 +5,7 @@ import os
 import numpy as np
 
 # 打开图片
-pngName = '317639a9-4f1e-4092-bbd3-a0f42a042f2e'
+pngName = 'df58afcf-e5a5-4163-ba6b-1042cf0ec949'
 img = Image.open('F:/Pathanalysis/%s.png' % pngName)
 # 创建路径
 changePath="F:/Pathanalysis/change/imgCut/"+pngName[:4]+'/'  # 左闭右开区间
