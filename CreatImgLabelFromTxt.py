@@ -5,20 +5,21 @@
 from PIL import Image
 from PIL import ImageDraw
 
-f=open("df58afcf-e5a5-4163-ba6b-1042cf0ec949.txt")
-lines = f.readlines()
-len1=len(lines)
-i=0
-L=[]
 
-def roiTest():
+def roiTest(name):
+    f = open(name + '.txt')
+    lines = f.readlines()
+    len1 = len(lines)
+    i = 1
+    L = []
     x=0
-    srcImg = Image.new('L',(34085,30072))
-    draw = ImageDraw.Draw(srcImg)
-    global i
+
     for line in lines:
         line = line.split()
         L.append(line)
+    widht,height=int(L[0][0]),int(L[0][1])
+    srcImg = Image.new('L', (widht, height))
+    draw = ImageDraw.Draw(srcImg)
     while int(i)<len1:
         print i
         print L[i+1]
@@ -37,9 +38,16 @@ def roiTest():
         i = i + 2 + int(L[i][0])
 
 
-    srcImg.save('newGray.png')
-
+    srcImg.save(name+'.png')
+    f.close()
+    srcImg.close()
 
 
 if __name__ == '__main__':
-    roiTest()
+    name=['0f83c078-f8c2-4ebc-afab-844209241f06','2e956431-326d-42b2-bc83-4b5308bfd8f4','15abcdb3-3bf7-48b3-9a1d-5be79aec66ec',
+          '42bb1ded-7f48-4a83-a56b-a8e748ad2362','c8c0c1e2-3546-4f16-857d-8e53f6c08321','c5703c0f-17fe-4d23-af20-f339d72ec354',
+          'ffe2f7cf-fcd2-45db-9cd7-474af98992fc']
+    for i in name:
+        print(i)
+        roiTest(i)
+

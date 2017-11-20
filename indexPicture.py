@@ -6,7 +6,7 @@
 from random import randint
 from PIL import Image
 import os
-path = 'C:/users/luchi/desktop/test/3176label/'
+path = 'F:/Pathanalysis/change/imgCut/label/'
 os.chdir(path)
 imgList = os.listdir(path)
 def randomPalette(length, min, max):
