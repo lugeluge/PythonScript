@@ -17,9 +17,14 @@ def check_img_size(path,changePath):  #获取图片大小，不是256的移走
             os.rename(path+img,changePath+img)
 
 if __name__ == '__main__':
-    path='F:/Pathanalysis/change/twoclasses/label/'
-    changePath='F:/Pathanalysis/change/twoclasses/labelsmall/'
-    check_img_size(path,changePath)
+    path='F:/Pathanalysis/change/twoclass/other/label/'
+    changePath='F:/Pathanalysis/change/twoclass/other/labelsmall/'
+    #check_img_size(path,changePath)
+    img = Image.open('C:/users/luchi/desktop/23.png')
+
+    print np.unique(img)
+    nimg = np.array(img)
+    print nimg.dtype
     print 'done'
 
 

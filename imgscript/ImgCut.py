@@ -32,9 +32,9 @@ def cutImg(img, width, height, changeSize, changePath):
 
 
 def multCut(pngName):
-    img = Image.open('F:/Pathanalysis/%s.png' % pngName)
+    img = Image.open('F:/Pathanalysis/change/twoclass/other/pic/%s.png' % pngName)
     # 创建路径
-    changePath = "F:/Pathanalysis/change/imgCut/" + pngName[:4] + '/'  # 左闭右开区间
+    changePath = "F:/Pathanalysis/change/twoclass/other/label/" + pngName[:4] + '/'  # 左闭右开区间
     if not os.path.exists(changePath):
         print('不存在要改变的路径', changePath)
         os.mkdir(changePath)
@@ -56,9 +56,10 @@ if __name__ == '__main__':
             '15abcdb3-3bf7-48b3-9a1d-5be79aec66ec',
             '42bb1ded-7f48-4a83-a56b-a8e748ad2362', 'c8c0c1e2-3546-4f16-857d-8e53f6c08321',
             'c5703c0f-17fe-4d23-af20-f339d72ec354',
-            'ffe2f7cf-fcd2-45db-9cd7-474af98992fc']
+            'ffe2f7cf-fcd2-45db-9cd7-474af98992fc','0c3d12d3-f8cc-4b96-9499-9c996d5fde77',
+            '317639a9-4f1e-4092-bbd3-a0f42a042f2e','df58afcf-e5a5-4163-ba6b-1042cf0ec949']
     for i in name:
         print(i)
-        #multCut(i)
+        multCut(i)
     print('done')
-    multCut('317639a9-4f1e-4092-bbd3-a0f42a042f2e')
+

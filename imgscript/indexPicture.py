@@ -6,7 +6,7 @@
 from random import randint
 from PIL import Image
 import os
-path = 'F:/Pathanalysis/change/imgCut/label/'
+path = 'F:/Pathanalysis/change/twoclass/other/label/'
 os.chdir(path)
 imgList = os.listdir(path)
 def randomPalette(length, min, max):
@@ -14,6 +14,6 @@ def randomPalette(length, min, max):
 
 for pic in imgList:
     img = Image.open(pic)
-    img.putpalette([0,0,0,0,255,0,0,0,255]) #每三个值表示一个rgb值
+    img.putpalette([0,0,0,0,0,255,0,0,255]) #每三个值表示一个rgb值
     img.save(pic)
 print 'done'

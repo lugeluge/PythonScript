@@ -6,7 +6,7 @@
 import os
 import shutil
 
-path = "F:/Pathanalysis/change/imgCut/label/"
+path = "F:/Pathanalysis/change/twoclass/other/label/"
 changPath = path
 if not os.path.exists(path):
     print('不存在目录')
