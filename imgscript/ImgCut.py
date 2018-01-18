@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from PIL import Image
 import os
+import cv2
 import numpy as np
 
 
@@ -50,7 +51,14 @@ def multCut(pngName):
     cutImg(img, width, height, changeSize, changePath)
     img.close()
 
-
+def Binarization(src):
+    path='C:/users/luchi/desktop/big/'+src+'.jpg'
+    print path
+    img = cv2.imread(path)   #numpy数组类型
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    ret, binary = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
+    cv2.imwrite('C:/users/luchi/desktop/black/'+src+'.jpg', binary)
+    return binary
 if __name__ == '__main__':
     name = ['0f83c078-f8c2-4ebc-afab-844209241f06', '2e956431-326d-42b2-bc83-4b5308bfd8f4',
             '15abcdb3-3bf7-48b3-9a1d-5be79aec66ec',
@@ -60,6 +68,7 @@ if __name__ == '__main__':
             '317639a9-4f1e-4092-bbd3-a0f42a042f2e','df58afcf-e5a5-4163-ba6b-1042cf0ec949']
     for i in name:
         print(i)
-        multCut(i)
+        #multCut(i)
+        Binarization(i)
     print('done')
 
