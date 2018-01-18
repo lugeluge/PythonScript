@@ -17,11 +17,23 @@ def check_img_size(path,changePath):  #获取图片大小，不是256的移走
             os.rename(path+img,changePath+img)
 
 if __name__ == '__main__':
-    path='F:/Pathanalysis/change/twoclasses/label/'
-    changePath='F:/Pathanalysis/change/twoclasses/labelsmall/'
-    check_img_size(path,changePath)
-    print 'done'
+    # path='F:/Pathanalysis/change/twoclass/other/label/'
+    # changePath='F:/Pathanalysis/change/twoclass/other/labelsmall/'
+    # #check_img_size(path,changePath)
+    # img = Image.open('F:/Pathanalysis/change/newtwo/testlabel/0c3d/model.png')
+    # #img.putpalette([0,0,0,0,0,255,0,0,255]) #每三个值表示一个rgb值
+    # print img.getcolors()
+    # print img.mode
+    # print np.unique(img)
+    # nimg = np.array(img)
+    # print nimg.dtype
+    #
+    # print 'done'
 
+    path='F:/Pathanalysis/change/newtwo/testlabel/2e95/middlemodel.png'
+    img = Image.open(path)
+    img.putpalette([0, 0, 0, 0, 0, 255, 0, 255, 0])
+    img.save(path)
 
 
 
